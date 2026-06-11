@@ -5,6 +5,13 @@ const sharp = require("sharp");
 const path = require("path");
 const fs = require("fs");
 const { exec } = require("child_process");
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads", { recursive: true });
+}
+
+if (!fs.existsSync("compressed")) {
+  fs.mkdirSync("compressed", { recursive: true });
+}
 
 const app = express();
 
@@ -96,5 +103,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-
