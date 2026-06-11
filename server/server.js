@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://file-compressor-3.vercel.app/",
+    origin: "https://file-compressor-3.vercel.app",
   }),
 );
 
