@@ -28,7 +28,7 @@ function Home() {
       formData.append("quality", quality);
 
       const response = await axios.post(
-        "http://localhost:5000/compress",
+        "https://file-compressor-api-1nlu.onrender.com/compress",
         formData,
         {
           responseType: "blob",
