@@ -8,7 +8,11 @@ const { exec } = require("child_process");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://file-compressor-3.vercel.app/",
+  }),
+);
 
 const upload = multer({ dest: "uploads/" });
 
