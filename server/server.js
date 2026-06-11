@@ -16,7 +16,7 @@ app.use(
 
 const upload = multer({ dest: "uploads/" });
 
-app.post("/https://file-compressor-api-1nlu.onrender.com/compress", upload.single("image"), async (req, res) => {
+app.post("/compress", upload.single("image"), async (req, res) => {
   try {
     const quality = Number(req.body.quality) || 60;
 
